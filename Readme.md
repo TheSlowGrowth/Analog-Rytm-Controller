@@ -2,7 +2,7 @@
 A powerfull MIDI controller for the Elektron Analog Rytm
 
 This repository contains the firmware files for building a MIDI controller for the Elektron Analog Rytm.
-The firmware is based on the [MIDIBox project](http://www.ucapps.de) and can be built using the STM32F4 or STM32 MIDIBox Core module.
+The device is based on the [MIDIBox project](http://www.ucapps.de) and can be built using the STM32F4 or STM32 MIDIBox Core module.
 Due to the simplicity of the circuit, the whole project can be built using a STM32F4 Discovery board,
 with the additional circuitry soldered to perfboard/protoboard PCBs.
 
@@ -66,12 +66,13 @@ sync cycle can be adjusted in the settings.
 
 The device is powered from a USB jack.
 There are four MIDI ports.
-| jack     | usage                                                      |
-| -------- | ---------------------------------------------------------- |
-MIDI 1 In  | Data from here will be forwarded to the Rytm.
-MIDI 1 Out | This is a THRU port for MIDI 1 In (if clocked externally) or a THRU port for MIDI 2 In (if clocked from the Rytm)
-MIDI 2 In  | Connect this to the Rytms MIDI Out for feedback over over the track mute states (and for syncing to the Rytms clock output, if that is the selected sync source)
-MIDI 2 Out | Connect this to the Rytms MIDI Input
+
+| jack       | usage                                                      |
+| ---------- | ---------------------------------------------------------- |
+| MIDI 1 In  | Data from here will be forwarded to the Rytm.
+| MIDI 1 Out | This is a THRU port for MIDI 1 In (if clocked externally) or a THRU port for MIDI 2 In (if clocked from the Rytm) |
+| MIDI 2 In  | Connect this to the Rytms MIDI Out for feedback over over the track mute states (and for syncing to the Rytms clock output, if that is the selected sync source) |
+| MIDI 2 Out | Connect this to the Rytms MIDI Input |
 
 ### changing the settings
 
