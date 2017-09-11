@@ -306,7 +306,7 @@ static void storeSettings()
             MIOS32_MIDI_SendDebugMessage("Error writing settings at address %d: No valid page was found.", i);
         else if (result == -3)
             MIOS32_MIDI_SendDebugMessage("Error writing settings at address %d: Flash write error.", i);
-        else
+        else if (result < 0)
             MIOS32_MIDI_SendDebugMessage("Error writing settings at address %d: Unknown error %d.", i, result);
         if (result < 0)
             break;
