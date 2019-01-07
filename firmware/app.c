@@ -703,6 +703,7 @@ void APP_AIN_NotifyChange(u32 pin, u32 pin_value)
 static s32 NOTIFY_MIDI_Rx(mios32_midi_port_t port, u8 midi_byte)
 {
     if (   ((port == UART0) && (settings.readable.syncSource == syncToMidi1))
+        || ((port == USB0)  && (settings.readable.syncSource == syncToMidi1))
         || ((port == UART1) && (settings.readable.syncSource == syncToRytm )) )
     {
         int syncMax = settings.readable.syncNominator * settings.readable.syncDenominator * 6;
